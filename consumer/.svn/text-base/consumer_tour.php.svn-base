@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+        <meta http-equiv="Pragma" content="no-cache" />
+
+        <!-- title -->
+        <title>Techmatcher&trade;</title>
+        <?php include_once 'includes/scripts.php';?>
+
+        <!-- css -->
+        <link rel="stylesheet" href="css/reset-fonts.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="css/base-min.css" type="text/css" media="screen, projection, print" />
+        <link rel="stylesheet" href="css/main.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="js/cluetip/jquery.cluetip.css" type="text/css" media="screen, projection" />       
+    </head>
+   <script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+			<script type="text/javascript">
+			try{
+			var pageTracker = _gat._getTracker("UA-17257404-1");
+			pageTracker._trackPageview();
+			} catch(err) {}
+   </script>
+    <body>
+        <!-- container -->
+        <div id="container" class="container-page"><div id="container-inner">
+                <?php include_once 'includes/header.php';?>
+                              <!-- body -->
+                <div id="bd" class="bd-page"><div id="bd-inner">
+
+                        <!-- page-content -->
+                        <div class="page-content">
+
+                         
+                            <!-- page-container -->
+                            <div class="page-container provider-profile">
+                                <!-- page-container-top --><div class="page-container-top"></div><div class="page-container-inner clearfix">
+
+						
+						<h1>Take the Tour!</h1>
+
+                                    <!-- main column -->
+                                    <div class="main">
+                                    <div class="main-inner">
+                                <!-- tab-panel -->
+                                            <div class="tab-panel-b clearfix">
+                                                        <ol>
+                                          <h3> <li> Get Started by Creating Your Account </li></h3>
+                                            <br/><p> Just one quick step to get started</p>
+                                            <br/>
+                                         <h3> <li> Create Your Profile to Find Matches!</li></h3>
+                                         <br/> <p> Build a complete profile that gets matches.</p>
+                                            <br/>
+                                          <h3> <li> Take a Free Look at Your Options</li></h3>
+                                            <br/><p> Examine the free matching to see what we have to offer</p>
+                                            <br/>
+                                         <h3> <li> Subscribe to Unlock Matches Targeted to You!</li></h3>
+                                            <br/><p> Fill out a subscription level that fits you and unlock the deeper analytical tools</p>
+                                            <br/>
+                                          </ol>
+							                             </div><!-- /tab-panel -->      
+                                        </div></div><!-- /main column -->
+                        <?php include_once 'includes/sidebar_consumer_tour.php';?>
+                                    <div class="clear"></div>
+                                    <br />
+                                </div><!-- page-container-bottom --><div class="page-container-bottom"></div></div><!-- /page-container -->
+                        </div><!-- /page-content -->
+
+                    </div></div><!-- /body -->
+            </div></div><!-- /container -->
+        <?php include_once 'includes/footer1.php';
+              include_once 'popups/provider_subscription.php';
+              include_once 'popups/status_subscription.php';
+              include_once 'popups/login_header.php';
+        ?>
+    </body>
+</html>

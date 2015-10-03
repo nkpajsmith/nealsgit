@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<title>jScrollHorizontalPane - basic examples</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" type="text/css" media="all" href="jScrollHorizontalPane.css" />
+<link rel="stylesheet" type="text/css" media="all" href="reset.css" />
+<style type="text/css">
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font: normal 12px/1.2em Arial, Helvetica, sans-serif;
+	margin: 20px;
+}
+p {
+	margin-bottom: 10px;
+}
+h1 {
+	font: bold 22px/1.2em Arial, Helvetica, sans-serif;
+	margin-bottom: 10px;
+}
+h2 {
+	font: normal 18px/1.2em Arial, Helvetica, sans-serif;
+	margin-bottom: 4px;
+}
+h3 {
+	font: bold 14px/1.2em Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 4px;
+}
+.contents {
+	display: block;
+	width: 700px;
+	height: 200px;
+	background: #CC66FF;
+}
+ul.blocks {
+	padding: 0;
+	width: 1000px;
+	display: block;
+	height: 200px;
+}
+ul.blocks li {
+	width: 200px;
+	margin: 0 0 0 0px;
+	float: left;
+	display: block;
+	height: 200px;
+}
+.holder {
+	margin: 0;
+	display: block;
+	/* TEMP */
+	margin-bottom: 20px;
+}
+.scroll-pane {
+	width: 200px;
+	background: #ccc;
+	float: left;
+	padding: 0;
+}
+#pane1 {
+	height: 100px;
+	width: 250px;
+	padding: 0;
+	display: block;
+	_overflow: hidden;
+}
+
+#pane5 {
+	height: 200px;
+	width: 40%;
+	padding: 0;
+	display: block;
+	_overflow: hidden;
+}
+
+a.jScrollArrowLeft {
+	background: url(basic_arrow_up.gif) no-repeat 0 0;
+}
+a.jScrollArrowLeft:hover {
+	background-position: 0 -15px;
+}
+a.jScrollArrowRight {
+	background: url(basic_arrow_down.gif) no-repeat 0 0;
+}
+a.jScrollArrowRight:hover {
+	background-position: 0 -15px;
+}
+a.jScrollActiveArrowButton, 
+a.jScrollActiveArrowButton:hover {
+	background-position: 0 -30px;
+}
+
+.orange-bar .jScrollPaneTrack {
+	background: #f60;
+}
+.orange-bar .jScrollPaneDrag {
+	background: #00f url(drag_grab.gif) no-repeat 50% 50%;
+}
+.orange-bar .scroll-pane {
+	background: #69f;
+}
+</style>
+
+<script type="text/javascript" src="../lib/jQuery/jquery-1.2.1.js"></script>
+<script type="text/javascript" src="../lib/jQuery/jquery.dimensions.js"></script>
+<script type="text/javascript" src="../lib/jQuery/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="../jScrollHorizontalPane.js"></script>
+<script type="text/javascript">
+
+$(function() {
+	var originalSizes = new Array();
+	$('#pane5').jScrollHorizontalPane({scrollbarHeight:10, scrollbarMargin:0});
+	// this initialises the demo scollpanes on the page.
+	$('#pane1').jScrollHorizontalPane({showArrows:true});
+
+	$('.scroll-to').bind('click',function(){
+		$('#pane1')[0].scrollTo(75);
+		return false;
+	});
+		
+	
+	$('a.jumper').click(function(){
+		var pos = $(this).attr('id');
+		var c = $("#pane5");
+		c[0].scrollTo("li:eq("+pos+")");
+		return false;
+	});
+});
+
+</script>
+</head>
+<body>
+<h1>jScrollHorizontalPane</h1>
+<h2>Basic examples</h2>
+<p id="intro">
+	The following displays the jScrollHorizontalPane in action.  See <a href="http://www.threeformed.com">Threeformed</a> for live example.
+</p>
+
+<a class="jumper" id="0" href="#">0</a>,
+<a class="jumper" id="1" href="#">1</a>,
+<a class="jumper" id="2" href="#">2</a>,
+<a class="jumper" id="3" href="#">3</a>,
+<a class="jumper" id="4" href="#">4</a>
+<div class="holder">
+	<div id="pane5" class="scroll-pane">
+		<ul class="blocks">
+			<li style="background-color:#9933CC;" class="scroll-interval">
+				<p>0</p>
+			</li>
+			<li style="background-color:#FFCC99;" class="scroll-interval">
+				<p>1</p>
+			</li>
+			<li style="background-color:#FF0000;" class="scroll-interval">
+				<p>2</p>
+			</li>
+			<li style="background-color:#00FFCC;" class="scroll-interval">
+				<p>3</p>
+			</li>
+			<li style="background-color:#663366;" class="scroll-interval">
+				<p>4</p>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<h3><a href="#" class="scroll-to">Scroll To</a></h3>
+<div class="holder">
+	<h3>#pane1</h3>
+	<div id="pane1" class="scroll-pane" >
+		<p style="width: 400px">&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec condimentum pretium nisl. Integer quis tellus nec turpis placerat scelerisque. In semper lacus eu nisi. Praesent dignissim metus sit amet enim. Nam auctor, neque semper congue sagittis, risus mi commodo pede, nec euismod magna libero at sem. In enim magna, vestibulum et, blandit sit amet, tempor vel, ligula. Phasellus ante augue, congue vitae, faucibus quis, gravida sit amet, diam. Nullam congue accumsan magna. Etiam a nunc. Aliquam elit urna, ornare vitae, ultrices et, tempus non, nisl. Duis eros neque, luctus quis, interdum ultricies, auctor eu, urna. Donec nibh. Integer in purus tempus mi venenatis mollis. Cras nunc odio, porttitor at, accumsan ac, adipiscing vitae, ante.
+		Nam dui enim,
+		fringilla vitae, rhoncus non, pharetra in, nunc. Sed a lectus vel orci bibendum placerat. Aliquam erat volutpat. Integer odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis dictum egestas lorem. Donec ultricies volutpat tellus. Phasellus justo arcu, pharetra eget, cursus non, consectetuer ac, nunc. Fusce orci tortor, semper vel, lacinia vitae, accumsan id, quam. Mauris semper molestie lectus. Duis venenatis erat ultrices nisl.</p>
+		Morbi augue enim, ultricies nec, lobortis sed, iaculis eu, quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Curabitur sollicitudin, elit eu porttitor varius, tellus velit tristique sem, vitae blandit nisi eros id purus. Nunc non lorem. Nunc blandit purus nec nisi. Donec vulputate, urna vel interdum tristique, tellus mauris pretium lacus, quis sodales lectus nunc sit amet turpis. Suspendisse potenti. Fusce accumsan. Maecenas aliquam consectetuer augue. Fusce est neque, condimentum nec, condimentum vitae, consectetuer ac, tortor. Praesent ultricies urna in lectus. Nam erat nunc, venenatis nec, facilisis sed, feugiat ac, pede. Vivamus aliquam aliquet libero. Curabitur dolor nunc, scelerisque at, gravida dignissim, rutrum at, orci. Maecenas vitae libero id eros rutrum hendrerit. Duis lacinia mauris non erat. Nullam et dolor vel leo sollicitudin suscipit. Sed laoreet libero.
+		Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent turpis. Suspendisse molestie, neque non congue ullamcorper, neque sem consequat nisl, eget pulvinar odio erat et tellus. Nunc luctus convallis dolor. Nullam non mauris. Etiam nisi magna, adipiscing eu, nonummy ac, laoreet nec, est. Pellentesque tristique, est vel condimentum feugiat, nisi justo rhoncus pede, in pulvinar mauris lectus vitae dui. Pellentesque scelerisque. Vestibulum tellus dolor, porta quis, facilisis nec, convallis vitae, quam. Quisque nisi. Nunc vitae nulla vel turpis mollis molestie. Etiam vitae massa.&lt;
+	</div>
+</div>
+</body>
+</html>

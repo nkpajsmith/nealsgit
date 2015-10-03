@@ -1,0 +1,22 @@
+/* Use Gifs instead of PNGs for Main Nav in IE6*/
+div#nav ul li a:hover {background: url(../images/bg-nav-left.gif) top left no-repeat;}
+div#nav ul li a:hover span {background: url(../images/bg-nav-right.gif) top right no-repeat;}
+div#nav ul li a:link, div#nav ul li a:visited {margin: 0;}
+div#nav ul li a:link span, div#nav ul li a:visited span {margin: 0;}
+
+/* Fix Width of Call Out Choice */
+div.call-out-choice {
+	width: 450px;
+}
+
+
+/* Client Login */
+div.login-form {margin-left: -160px;}
+
+div.options-actions ul li a:link, div.options-actions ul li a:visited {
+	height: 1%;
+}
+
+div.skill-column select {
+	height: 180px;
+}

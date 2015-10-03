@@ -1,0 +1,39 @@
+.tmm_Modal {
+	background: rgba(182,181,181,.71);
+	position: absolute;
+	z-index: 1000;
+	padding: 1em;
+	text-align: center;
+	border-radius: 10px;
+	
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.tmm_content {
+	position: absolute;
+	z-index: 1100;
+	padding: 1em;
+	text-align: center;
+}
+
+
+.tmmodal {
+	visibility: hidden; /* so the browsers can still get dimensions of it */
+}
+
+/* you can change this to style it however you want */
+.edit-link {
+	background: transparent url(img/modal-edit.png) no-repeat center center;
+	width: 309px;
+	height: 157px;
+	display: block;
+	margin: 0 auto;
+	color: #000!important;
+	text-decoration: none!important;
+	text-transform: uppercase;
+	font-size: 20px;
+	text-align: left;
+	line-height: 160px;
+	text-indent: 110px;
+}

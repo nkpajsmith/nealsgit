@@ -1,0 +1,12 @@
+/* Fix IE Padding of Submit Button  */
+div.form .clear-btn {
+	padding: 0 11px;
+}
+
+.ui-icon-closethick {
+	margin: -6px 0 0 533px;
+}
+
+
+/* Client Login */
+div.login-form {margin-left: -160px;}

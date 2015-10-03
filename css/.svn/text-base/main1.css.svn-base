@@ -1,0 +1,5 @@
+.roundcornersmall{
+background:url("../images/bg-section-top.gif") no-repeat scroll left top #FFFFFF;
+height:1%;
+margin:0 0 12px;
+}

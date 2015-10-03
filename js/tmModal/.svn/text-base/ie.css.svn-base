@@ -1,0 +1,4 @@
+.tmm_Modal {
+	background-color: rgb(182,181,181); 
+	filter:progid:DXImageTransform.Microsoft.alpha(opacity=71);
+}

@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /secure/
+Disallow: /partials/
+Disallow: /provider/
+Disallow: /css/
+Disallow: /consumer/
+Disallow: /popups/
+Disallow: /js/
+Disallow: /includes/
+Allow: /
+
+
